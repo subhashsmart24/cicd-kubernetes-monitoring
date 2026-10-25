@@ -1,0 +1,5 @@
+Flask
+prometheus-client
+gunicorn
+pytest
+requests
