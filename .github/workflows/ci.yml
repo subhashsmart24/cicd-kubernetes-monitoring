@@ -28,12 +28,12 @@ jobs:
         run: python -m pytest tests/ -v
 
       - name: Run Trivy filesystem scan
-    uses: aquasecurity/trivy-action@master
-    with:
-      scan-type: fs
-      scan-ref: .
-      scanners: vuln,secret
-      format: table
-      exit-code: '0'
-      ignore-unfixed: true
-      vuln-type: 'os,library'
+        uses: aquasecurity/trivy-action@0.33.1
+         with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret
+          format: table
+          exit-code: '0'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
