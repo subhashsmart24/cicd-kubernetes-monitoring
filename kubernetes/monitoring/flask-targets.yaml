@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-prometheus-config
+  namespace: monitoring
+data:
+  flask.yml: |
+    - targets:
+        - "cicd-monitoring-service.default.svc.cluster.local:5000"
+      labels:
+        application: "cicd-monitoring-app"
